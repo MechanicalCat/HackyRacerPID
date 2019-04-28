@@ -1,3 +1,21 @@
+/**************************************************************************\
+*    DC Controller - from MechanicalCat.org                                *
+*    Copyright (C) 2018 Ian Beaver / MechanicalCat.org                     *
+*                                                                          *
+*    This program is free software: you can redistribute it and/or modify  *
+*    it under the terms of the GNU General Public License as published by  * 
+*    the Free Software Foundation, either version 3 of the License, or     *
+*    (at your option) any later version.                                   *
+*                                                                          *
+*    This program is distributed in the hope that it will be useful,       *
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+*    GNU General Public License for more details.                          *
+*                                                                          *
+*    You should have received a copy of the GNU General Public License     *
+*    along with this program.  If not, see <http://www.gnu.org/licenses/>. *
+\**************************************************************************/
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define DEBUG_NAME HR
 #include <Debug.h>
@@ -8,7 +26,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 // --- The motor driver ---
-#define IGNITION 4 // Pin D4. ON = "pull low". OFF = "INPUT-PULLUP". (Never "pull high"!)
+#define IGNITION 4 // Pin D4. ON = drive low. OFF = "INPUT-PULLUP". (Never drive high!)
 #define DRIVE 5 // Pin D5 is the PWM ('analog') output to the motor controller - 980Hz
 #define DRIVE_MIN 51  // The analogWrite() value on DRIVE which demands zero throttle (1V nomimal)
 #define DRIVE_MAX 225 //  "       "          "     "     "     "        max     "     (4V    "   )
